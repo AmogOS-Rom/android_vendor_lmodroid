@@ -19,36 +19,20 @@
 # Default: LMODROID_BUILD_NAME
 CUSTOMER_VERSION_VAR_NAME := LMODROID_BUILD_NAME
 
-# Customer specific code below
-
-# Set LMODROID_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
-ifndef LMODROID_BUILDTYPE
-    ifdef RELEASE_TYPE
-        # Starting with "LMODROID_" is optional
-        RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^LMODROID_||g')
-        LMODROID_BUILDTYPE := $(RELEASE_TYPE)
-    endif
-endif
-
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY WEEKLY EXPERIMENTAL,$(LMODROID_BUILDTYPE)),)
-    LMODROID_BUILDTYPE := UNOFFICIAL
-endif
-
 DATE_YEAR := $(shell date -u +%Y)
 DATE_MONTH := $(shell date -u +%m)
 DATE_DAY := $(shell date -u +%d)
-ifeq ($(filter UNOFFICIAL,$(LMODROID_BUILDTYPE)),)
-    BUILD_DATE := $(DATE_YEAR)$(DATE_MONTH)$(DATE_DAY)
-else
+ifeq ($(APPEND_BUILD_DATE),true)
     DATE_HOUR := $(shell date -u +%H)
     DATE_MINUTE := $(shell date -u +%M)
     BUILD_DATE := $(DATE_YEAR)$(DATE_MONTH)$(DATE_DAY)-$(DATE_HOUR)$(DATE_MINUTE)
+else
+    BUILD_DATE := $(DATE_YEAR)$(DATE_MONTH)$(DATE_DAY)
 endif
 
-LMODROID_VERSION ?= 4.0
-LMODROID_NAME ?= LMODroid
-LMODROID_BUILD_NAME := $(LMODROID_NAME)-$(LMODROID_VERSION)-$(BUILD_DATE)-$(LMODROID_BUILDTYPE)-$(LMODROID_BUILD)
+LMODROID_VERSION ?= 0.1
+LMODROID_NAME ?= AmogOS-ROM
+LMODROID_BUILD_NAME := $(LMODROID_NAME)-$(LMODROID_VERSION)-$(BUILD_DATE)-$(LMODROID_BUILD)
 
 LMODROID_PROPERTIES := \
     ro.lmodroid.build_name=$(LMODROID_BUILD_NAME) \

@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/addon.d/50-lmodroid.sh
-    
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
@@ -157,7 +157,6 @@ ifneq ($(WITH_GMS),true)
 PRODUCT_PACKAGES += \
     F-Droid \
     F-DroidPrivilegedExtension
-
 endif
 
 
