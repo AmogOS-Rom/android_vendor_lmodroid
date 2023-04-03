@@ -23,5 +23,3 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(LMODROID_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(LMODROID_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(LMODROID_TARGET_PACKAGE).sha256sum
 	@echo "Package Complete: $(LMODROID_TARGET_PACKAGE)" >&2
-	@echo "Creating json OTA..." >&2
-	$(hide) ./vendor/lmodroid/build/tools/createjson.sh $(TARGET_DEVICE) $(PRODUCT_OUT) $(LINEAGE_VERSION).zip
