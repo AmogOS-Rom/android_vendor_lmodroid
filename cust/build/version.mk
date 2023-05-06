@@ -30,9 +30,33 @@ else
     BUILD_DATE := $(DATE_YEAR)$(DATE_MONTH)$(DATE_DAY)
 endif
 
+# Vanilla
+LMO_EXTRAVERSION :=
+
+# FOSS
+ifeq ($(GAPPS),false)
+    WITH_GMS := true
+    LMO_EXTRAVERSION := FOSS-
+endif
+
+# Chocolate
+ifeq ($(GAPPS),true)
+    $(GAPPS will be included in the build)
+    LMO_EXTRAVERSION := GAPPS-
+    ifeq ($(GAPPS_ARM32),)
+        $(warning GAPPS_ARM32 is not set, it defaulting to 64 bit)
+        $(warning Dont try to set it, only needed for 32 bit devices)
+        $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+    endif
+    ifeq ($(GAPPS_ARM32), false)
+        $(warning including 32 bit gapps)
+        $(call inherit-product, vendor/gapps/arm/arm-vendor.mk)
+    endif
+endif
+
 LMODROID_VERSION ?= 0.1
 LMODROID_NAME ?= AmogOS-ROM
-LMODROID_BUILD_NAME := $(LMODROID_NAME)-$(LMODROID_VERSION)-$(BUILD_DATE)-$(LMODROID_BUILD)
+LMODROID_BUILD_NAME := $(LMODROID_NAME)-$(LMODROID_VERSION)-$(LMO_EXTRAVERSION)$(BUILD_DATE)-$(LMODROID_BUILD)
 
 LMODROID_PROPERTIES := \
     ro.lmodroid.build_name=$(LMODROID_BUILD_NAME) \
