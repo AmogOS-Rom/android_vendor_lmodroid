@@ -56,10 +56,12 @@ endif
 
 LMODROID_VERSION ?= 1.0
 LMODROID_NAME ?= AmogOS-ROM
+AMOGOS_MAINTAINER?=NOBODY
 LMODROID_BUILD_NAME := $(LMODROID_NAME)-$(LMODROID_VERSION)-$(LMO_EXTRAVERSION)$(BUILD_DATE)-$(LMODROID_BUILD)
 
 LMODROID_PROPERTIES := \
     ro.lmodroid.build_name=$(LMODROID_BUILD_NAME) \
     ro.lmodroid.build_date=$(BUILD_DATE) \
     ro.lmodroid.build_type=$(LMODROID_BUILDTYPE) \
+    ro.amogos.maintainer=$(AMOGOS_MAINTAINER) \
     ro.lmodroid.version=$(LMODROID_VERSION)
