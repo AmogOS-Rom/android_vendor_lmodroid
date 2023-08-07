@@ -18,26 +18,25 @@ device_repos=(
   # common repos in cheetah
 )
 
-# Need OTA zip for firmware, not supported by image_unpacker yet
-readonly needs_ota=true
+readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="TQ2A.230505.002"
+readonly build_id="TQ3A.230705.001"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly prev_aosp_tag="android-13.0.0_r41"
-readonly aosp_tag="android-13.0.0_r43"
+readonly prev_aosp_tag="android-13.0.0_r52"
+readonly aosp_tag="android-13.0.0_r61"
 
-readonly build_number="9891397"
+readonly build_number="10216780"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/panther-tq2a.230505.002-factory-3271ae5c.zip"
-readonly image_sha256="3271ae5c4d3288e4a067ad161728ae40a6fc62f8acafd0e426442c9e04c71a05"
+readonly image_url="https://dl.google.com/dl/android/aosp/panther-tq3a.230705.001-factory-b12ec778.zip"
+readonly image_sha256="b12ec778e723204bc1cc8d4968ac360190d84e5b4ca69ccaefefe2d3d01aff91"
 
-readonly flash_url="https://flash.android.com/build/9891397?target=panther-user&signed"
+readonly flash_url="https://flash.android.com/build/10216780?target=panther-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/panther-ota-tq2a.230505.002-c3d87694.zip"
-readonly ota_sha256="c3d87694866555cd9c638b4bb0ced0193b9007f1cdf4f444a18c21e87a691600"
+readonly ota_url="https://dl.google.com/dl/android/aosp/panther-ota-tq3a.230705.001-1467c429.zip"
+readonly ota_sha256="1467c42957c634b1dae3d7662208c425f109fdcc69b9247014a522e131067105"
 
-readonly security_patch="2023-05-05"
+readonly security_patch="2023-07-05"

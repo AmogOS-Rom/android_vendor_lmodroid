@@ -22,21 +22,21 @@ device_repos=(
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="TQ2A.230505.002"
+readonly build_id="TQ3A.230705.001"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly prev_aosp_tag="android-13.0.0_r38"
-readonly aosp_tag="android-13.0.0_r43"
+readonly prev_aosp_tag="android-13.0.0_r51"
+readonly aosp_tag="android-13.0.0_r61"
 
-readonly build_number="9891397"
+readonly build_number="10216780"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/sunfish-tq2a.230505.002-factory-9c73277b.zip"
-readonly image_sha256="9c73277b5dcfa4e022b11290e1215208123ee5f08b18aab0e8eae09d3b6d4851"
+readonly image_url="https://dl.google.com/dl/android/aosp/sunfish-tq3a.230705.001-factory-bd871347.zip"
+readonly image_sha256="bd87134788bcca09bff2b3100106ffaa843850603f835b08c9468de488584973"
 
-readonly flash_url="https://flash.android.com/build/9891397?target=sunfish-user&signed"
+readonly flash_url="https://flash.android.com/build/10216780?target=sunfish-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/sunfish-ota-tq2a.230505.002-3fc1ed1e.zip"
-readonly ota_sha256="3fc1ed1e0940709bb63cb1a8b71087165d48b3a26c9a40a321b6f35454d69f57"
+readonly ota_url="https://dl.google.com/dl/android/aosp/sunfish-ota-tq3a.230705.001-9ed5191d.zip"
+readonly ota_sha256="9ed5191d0f2b5d5ddafc6246a6684df4428e38834862ab88ba90898062b9e465"
 
-readonly security_patch="2023-05-05"
+readonly security_patch="2023-07-05"

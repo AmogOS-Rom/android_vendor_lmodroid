@@ -69,6 +69,26 @@ disable_postrender_cleanup {
 }
 
 soong_config_module_type {
+    name: "aapt_version_code",
+    module_type: "java_defaults",
+    config_namespace: "lmodroidGlobalVars",
+    value_variables: ["aapt_version_code"],
+    properties: ["aaptflags"],
+}
+
+aapt_version_code {
+    name: "aapt_version_code_defaults",
+    soong_config_variables: {
+        aapt_version_code: {
+            aaptflags: [
+                "--version-code",
+                "%s",
+            ],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "gralloc_10_usage_bits",
     module_type: "cc_defaults",
     config_namespace: "lmodroidGlobalVars",
@@ -81,6 +101,23 @@ gralloc_10_usage_bits {
     soong_config_variables: {
         additional_gralloc_10_usage_bits: {
             cppflags: ["-DADDNL_GRALLOC_10_USAGE_BITS=%s"],
+        },
+    },
+}
+
+soong_config_module_type {
+    name: "gralloc_handle_custom_content_md_reserved_size",
+    module_type: "cc_defaults",
+    config_namespace: "lmodroidGlobalVars",
+    bool_variables: ["gralloc_handle_has_custom_content_md_reserved_size"],
+    properties: ["export_cflags"],
+}
+
+gralloc_handle_custom_content_md_reserved_size {
+    name: "gralloc_handle_has_custom_content_md_reserved_size_defaults",
+    soong_config_variables: {
+        gralloc_handle_has_custom_content_md_reserved_size: {
+            export_cflags: ["-DGRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE"],
         },
     },
 }
