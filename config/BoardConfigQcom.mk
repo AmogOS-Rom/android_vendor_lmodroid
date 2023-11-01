@@ -9,6 +9,7 @@ ATOLL := atoll #SM6250
 LAHAINA := lahaina #SM8350
 HOLI := holi #SM4350
 TARO := taro #SM8450
+PARROT := parrot #SM6450
 KALAMA := kalama #SM8550
 
 UM_3_18_FAMILY := msm8996
@@ -17,7 +18,7 @@ UM_4_9_FAMILY := sdm845 sdm710
 UM_4_14_FAMILY := $(MSMNILE) $(MSMSTEPPE) $(TRINKET) $(ATOLL)
 UM_4_19_FAMILY := $(KONA) $(LITO) $(BENGAL)
 UM_5_4_FAMILY := $(LAHAINA) $(HOLI)
-UM_5_10_FAMILY := $(TARO)
+UM_5_10_FAMILY := $(TARO) $(PARROT)
 UM_5_15_FAMILY := $(KALAMA)
 
 ifeq (,$(TARGET_ENFORCES_QSSI))
@@ -188,6 +189,11 @@ else ifneq ($(filter $(UM_5_15_FAMILY),$(TARGET_BOARD_PLATFORM)),)
 else
     MSM_VIDC_TARGET_LIST := $(TARGET_BOARD_PLATFORM)
     QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
+endif
+
+# Allow a device to manually override which HALs it wants to use
+ifneq ($(OVERRIDE_QCOM_HARDWARE_VARIANT),)
+QCOM_HARDWARE_VARIANT := $(OVERRIDE_QCOM_HARDWARE_VARIANT)
 endif
 
 # Allow a device to opt-out hardset of PRODUCT_SOONG_NAMESPACES

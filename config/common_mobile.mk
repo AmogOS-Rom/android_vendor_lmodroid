@@ -9,6 +9,23 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
 
+# Apps
+ifeq ($(PRODUCT_TYPE), go)
+PRODUCT_PACKAGES += \
+    SystemUIGo \
+    Launcher3QuickStepGo
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    SystemUIGo \
+    Launcher3QuickStepGo
+else
+PRODUCT_PACKAGES += \
+    Launcher3QuickStep
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Launcher3QuickStep
+endif
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
