@@ -6,17 +6,15 @@ include vendor/lmodroid/config/aosp_audio.mk
 
 # Default notification/alarm sounds
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.notification_sound=Argon.ogg \
-    ro.config.alarm_alert=Hassium.ogg
+    ro.config.notification_sound?=Argon.ogg \
+    ro.config.alarm_alert?=Hassium.ogg
 
 # Apps
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
-    SystemUIGo \
     Launcher3QuickStepGo
 
 PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUIGo \
     Launcher3QuickStepGo
 else
 PRODUCT_PACKAGES += \
@@ -87,6 +85,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/app/LMOFaceUnlock/LMOFaceUnlock.apk \
+    system/app/LMOFaceUnlock/oat/%/LMOFaceUnlock.odex \
+    system/app/LMOFaceUnlock/oat/%/LMOFaceUnlock.vdex \
     system/app/LMOFaceUnlock/lib/%/libtensorflowlite_jni.so \
     system/etc/face/detect-class1.tflite \
     system/etc/face/detect-class1.txt \
