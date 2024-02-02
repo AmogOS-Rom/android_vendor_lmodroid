@@ -59,7 +59,8 @@ PRODUCT_PACKAGES += \
     IconShapeTaperedRectOverlay \
     IconShapeTeardropOverlay \
     IconShapeVesselOverlay \
-    NavigationBarMode2ButtonOverlay
+    NavigationBarMode2ButtonOverlay \
+    RoundQSOverlay
 
 # DesktopMode
 ifneq ($(TARGET_WITHOUT_DESKTOPMODE), true)

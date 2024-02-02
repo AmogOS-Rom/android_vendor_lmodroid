@@ -166,9 +166,9 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_WITHOUT_PREBUILT_APPS),true)
 
 PRODUCT_PACKAGES += \
-    Jellyfish 
-endif
-
+    Jellyfish \
+    simpmusic \
+    metro
 endif
 
 # F-Droid
