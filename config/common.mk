@@ -166,11 +166,7 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_WITHOUT_PREBUILT_APPS),true)
 
 PRODUCT_PACKAGES += \
-    Gramophone
-
-ifeq ($(PRODUCT_IS_ATV),)
-PRODUCT_PACKAGES += \
-    Jellyfish
+    Jellyfish 
 endif
 
 endif
