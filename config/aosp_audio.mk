@@ -200,3 +200,21 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/effects/ogg/ChargingStarted.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/ChargingStarted.ogg \
     $(LOCAL_PATH)/effects/ogg/Effect_Tick_48k.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ui/Effect_Tick.ogg \
     $(LOCAL_PATH)/effects/material/ogg/WirelessChargingStarted.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/WirelessChargingStarted.ogg
+
+PRODUCT_COPY_FILES += \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/asus.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/asus.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/coolpad.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/coolpad.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/gionee.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/gionee.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/huwi.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/huwi.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/lenovo.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/lenovo.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/nokia_a.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/nokia_a.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/nokia_b.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/nokia_b.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/oneplus.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/oneplus.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/oppo1.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/oppo1.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/oppo2.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/oppo2.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/poco.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/poco.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/realme.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/realme.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/samsung.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/samsung.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/vivo.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/vivo.ogg \
+    vendor/lmodroid/prebuilt/common/media/audio/ringtones/xiaomi.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/xiaomi.ogg
+
