@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023 The LeafOS Project
+ * Copyright (C) 2023-2024 The LeafOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,24 @@
 
 genrule {
     name: "gen_hosts.adblock",
-    srcs: ["hosts.adblock.in"],
+    srcs: ["hosts", "hosts.adblock.in"],
     out: ["hosts.adblock"],
-    cmd: "cat system/core/rootdir/etc/hosts $(in) > $(out)"
+    cmd: "cat $(in) > $(out)"
 }
 
 prebuilt_etc {
     name: "hosts.adblock",
     src: ":gen_hosts.adblock",
     system_ext_specific: true,
+}
+
+install_symlink {
+    name: "hosts.adblock_symlink",
+    installed_location: "etc/hosts",
+    symlink_target: "hosts.real",
+}
+
+prebuilt_etc {
+   name: "hosts.real",
+   src: "hosts",
 }

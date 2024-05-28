@@ -5,12 +5,17 @@ PRODUCT_BRAND ?= LMODroid
 
 include $(CUSTOMER_VENDOR_DIR)/build/config.mk
 
+
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
+
 # Adblock
 PRODUCT_PACKAGES += \
-    hosts.adblock
+    hosts.adblock \
+    hosts.adblock_symlink \
+    hosts.real
 
 PRODUCT_COPY_FILES += \
-    vendor/lmodroid/etc/init/init.adblock.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.adblock.rc
+    vendor/lmodroid/etc/adblock/init.adblock.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.adblock.rc
 
 # Apps
 PRODUCT_PACKAGES += \
