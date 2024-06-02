@@ -61,8 +61,8 @@ PRODUCT_PACKAGES += \
     IconShapeVesselOverlay \
     NavigationBarMode2ButtonOverlay \
     RoundQSOverlay \
-    BrightnessSliderThin \
-    BrightnessSliderFilled
+    BrightnessSliderThinOverlay \
+    BrightnessSliderFilledOverlay
 
 # DesktopMode
 ifneq ($(TARGET_WITHOUT_DESKTOPMODE), true)

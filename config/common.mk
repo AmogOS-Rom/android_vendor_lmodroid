@@ -172,8 +172,9 @@ ifneq ($(TARGET_WITHOUT_PREBUILT_APPS),true)
 
 PRODUCT_PACKAGES += \
     Jellyfish \
-    simpmusic \
-    metro
+    accord \
+    innertune \
+    breezyweather
 endif
 
 # F-Droid
