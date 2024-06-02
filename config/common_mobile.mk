@@ -60,7 +60,9 @@ PRODUCT_PACKAGES += \
     IconShapeTeardropOverlay \
     IconShapeVesselOverlay \
     NavigationBarMode2ButtonOverlay \
-    RoundQSOverlay
+    RoundQSOverlay \
+    BrightnessSliderThin \
+    BrightnessSliderFilled
 
 # DesktopMode
 ifneq ($(TARGET_WITHOUT_DESKTOPMODE), true)
