@@ -60,6 +60,11 @@ PRODUCT_PACKAGES += \
     IconShapeTeardropOverlay \
     IconShapeVesselOverlay \
     NavigationBarMode2ButtonOverlay \
+    NavigationBarModeGesturalOverlay \
+    NavigationBarMode3ButtonOverlay \
+    NavigationBarModeGesturalOverlayExtraWideBack \
+    NavigationBarModeGesturalOverlayNarrowBack \
+    NavigationBarModeGesturalOverlayWideBack \
     RoundQSOverlay \
     BrightnessSliderThinOverlay \
     BrightnessSliderFilledOverlay
