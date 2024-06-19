@@ -13,14 +13,14 @@ PRODUCT_PACKAGES += \
     hosts.adblock \
     hosts.adblock_symlink \
     hosts.real
-
 PRODUCT_COPY_FILES += \
     vendor/lmodroid/etc/adblock/init.adblock.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.adblock.rc
 
 # Apps
 PRODUCT_PACKAGES += \
     Etar \
-    ExactCalculator
+    ExactCalculator \
+    OmniJaws
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -211,7 +211,8 @@ PRODUCT_PACKAGES += \
     LMOPdfViewer \
     ParallelSpace \
     Recorder \
-    Seedvault
+    Seedvault \
+    SettingsIntelligence
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
